@@ -12,9 +12,12 @@
 		7D0FB35A2286D00D00E0D0A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D0FB3582286D00D00E0D0A9 /* Main.storyboard */; };
 		7D0FB35C2286D00E00E0D0A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D0FB35B2286D00E00E0D0A9 /* Assets.xcassets */; };
 		7D0FB35F2286D00E00E0D0A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D0FB35D2286D00E00E0D0A9 /* LaunchScreen.storyboard */; };
+		BC671A3D02526A1F7EA5811F /* Pods_ZhiHuDaily_RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757324736296FE91B9289010 /* Pods_ZhiHuDaily_RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BB3E531E5C07AB54E12FF42 /* Pods-ZhiHuDaily-RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhiHuDaily-RxSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhiHuDaily-RxSwift/Pods-ZhiHuDaily-RxSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		757324736296FE91B9289010 /* Pods_ZhiHuDaily_RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhiHuDaily_RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D0FB3512286D00D00E0D0A9 /* ZhiHuDaily-RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZhiHuDaily-RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D0FB3542286D00D00E0D0A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D0FB3562286D00D00E0D0A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		7D0FB35B2286D00E00E0D0A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D0FB35E2286D00E00E0D0A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D0FB3602286D00E00E0D0A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F024963B06571B7E439BC173 /* Pods-ZhiHuDaily-RxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhiHuDaily-RxSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhiHuDaily-RxSwift/Pods-ZhiHuDaily-RxSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC671A3D02526A1F7EA5811F /* Pods_ZhiHuDaily_RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BCA87EC6A5E1BF0EF329E41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				757324736296FE91B9289010 /* Pods_ZhiHuDaily_RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D0BBF41BA948C304DCD6033 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BB3E531E5C07AB54E12FF42 /* Pods-ZhiHuDaily-RxSwift.debug.xcconfig */,
+				F024963B06571B7E439BC173 /* Pods-ZhiHuDaily-RxSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7D0FB3482286D00D00E0D0A9 = {
 			isa = PBXGroup;
 			children = (
 				7D0FB3532286D00D00E0D0A9 /* ZhiHuDaily-RxSwift */,
 				7D0FB3522286D00D00E0D0A9 /* Products */,
+				3D0BBF41BA948C304DCD6033 /* Pods */,
+				2BCA87EC6A5E1BF0EF329E41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D0FB3632286D00E00E0D0A9 /* Build configuration list for PBXNativeTarget "ZhiHuDaily-RxSwift" */;
 			buildPhases = (
+				F9DC61CC78D0FCFD4774ADDA /* [CP] Check Pods Manifest.lock */,
 				7D0FB34D2286D00D00E0D0A9 /* Sources */,
 				7D0FB34E2286D00D00E0D0A9 /* Frameworks */,
 				7D0FB34F2286D00D00E0D0A9 /* Resources */,
+				0A02AB9AA233549207B21FD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A02AB9AA233549207B21FD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZhiHuDaily-RxSwift/Pods-ZhiHuDaily-RxSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhiHuDaily-RxSwift/Pods-ZhiHuDaily-RxSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9DC61CC78D0FCFD4774ADDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZhiHuDaily-RxSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7D0FB34D2286D00D00E0D0A9 /* Sources */ = {
@@ -280,15 +365,13 @@
 		};
 		7D0FB3642286D00E00E0D0A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BB3E531E5C07AB54E12FF42 /* Pods-ZhiHuDaily-RxSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Q2FYSJY22;
 				INFOPLIST_FILE = "ZhiHuDaily-RxSwift/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chain.njw.ZhiHuDaily-RxSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -298,15 +381,13 @@
 		};
 		7D0FB3652286D00E00E0D0A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F024963B06571B7E439BC173 /* Pods-ZhiHuDaily-RxSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Q2FYSJY22;
 				INFOPLIST_FILE = "ZhiHuDaily-RxSwift/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chain.njw.ZhiHuDaily-RxSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

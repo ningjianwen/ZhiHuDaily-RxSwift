@@ -86,9 +86,9 @@ extension MenuViewController{
     
     static let sharedInstance = createMenuView()
     private static func createMenuView() -> MenuViewController{
-        let menuVC = UIViewController()
+        let menuVC = MenuViewController()
         menuVC.view.frame = CGRect(x: -menuWidth, y: 0, width: menuWidth, height: screenHeight)
-        return menuVC as! MenuViewController
+        return menuVC
     }
     
     func showThemeVC(_ model: ThemeModel){

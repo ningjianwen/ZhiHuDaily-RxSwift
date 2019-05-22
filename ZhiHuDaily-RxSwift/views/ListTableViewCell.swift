@@ -29,19 +29,31 @@ class ListTableViewCell: UITableViewCell {
         return morePic
     }()
     
-    var titleRight: CGFloat!
+//    var titleRight: CGFloat!
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: .default, reuseIdentifier: reuseIdentifier)
+        self.setupUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setupUI(){
         self.contentView.addSubview(self.title)
         self.contentView.addSubview(self.img)
         self.img.addSubview(self.morePicImg)
         
-//        let titleRight = screenWidth - imgWidth - 20.0
+        let titleRight = screenWidth - imgWidth - 20.0
         self.title.snp.makeConstraints { (make) in
             make.left.top.equalTo(15)
             make.height.equalTo(18)
-            make.right.equalTo(self.titleRight)
+            make.right.equalTo(titleRight)
         }
         
         self.img.snp.makeConstraints { (make) in
@@ -55,6 +67,14 @@ class ListTableViewCell: UITableViewCell {
             make.width.equalTo(32)
             make.height.equalTo(14)
             make.bottom.right.equalToSuperview()
+        }
+    }
+    
+    var cellModel: storyModel! {
+        didSet{
+            self.title.text = cellModel.title
+            self.img.kf.setImage(with: URL(string: (cellModel.images?.first)!))
+            self.morePicImg.isHidden = !(cellModel.multipic ?? false)
         }
     }
 

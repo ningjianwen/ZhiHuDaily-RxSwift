@@ -22,11 +22,26 @@ class BannerView: UICollectionView {
     var bannerDelegate: BannerDelegate?
     
     override func awakeFromNib() {
+
+    }
+    
+    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout){
+        super.init(frame: frame, collectionViewLayout: layout)
+        self.register(BannerCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        self.backgroundColor = .white
+        setupUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupUI(){
         contentOffset.x = screenWidth
         imgUrlArr
             .asObservable()
             .bind(to: rx.items(cellIdentifier: cellIdentifier, cellType: BannerCell.self)){
-            (row, model, cell) in
+                (row, model, cell) in
                 cell.img.kf.setImage(with: URL(string: model.image!))
                 cell.imgTitle.text = model.title!
             }
@@ -48,7 +63,6 @@ class BannerView: UICollectionView {
         rx.modelSelected(storyModel.self).subscribe(onNext: { (model) in
             self.bannerDelegate?.selectedItem(model: model)
         }).disposed(by: disposeBag)
-        
     }
 }
 

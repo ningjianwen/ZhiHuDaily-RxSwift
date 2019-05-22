@@ -74,11 +74,11 @@ class ThemeViewController: UIViewController {
                 cell.morePicImg.isHidden = !(model.multipic ?? false)
                 if model.images != nil {
                     cell.img.isHidden = false
-                    cell.titleRight = 105
+//                    cell.titleRight = 105
                     cell.img.kf.setImage(with: URL(string: (model.images?.first)!))
                 } else {
                     cell.img.isHidden = true
-                    cell.titleRight = 15
+//                    cell.titleRight = 15
                 }
             }
             .disposed(by: disposeBag)

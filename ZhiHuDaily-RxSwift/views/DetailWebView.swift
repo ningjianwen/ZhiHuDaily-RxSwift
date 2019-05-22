@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import WebKit
+//import WebKit
 
-class DetailWebView: WKWebView {
+class DetailWebView: UIWebView {
     var img = UIImageView().then {
         $0.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 200)
         $0.contentMode = .scaleAspectFill
@@ -54,10 +54,10 @@ class DetailWebView: WKWebView {
         $0.addSubview(acv)
     }
     
-    override init(frame: CGRect, configuration: WKWebViewConfiguration) {
-        super.init(frame: frame, configuration: configuration)
-        self.img.addSubview(self.maskImg)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         self.scrollView.addSubview(self.img)
+        self.img.addSubview(self.maskImg)
         self.scrollView.addSubview(self.titleLab)
         self.scrollView.addSubview(self.imgLab)
         self.scrollView.addSubview(self.previousLab)

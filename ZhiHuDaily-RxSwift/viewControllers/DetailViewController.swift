@@ -65,7 +65,7 @@ class DetailViewController: UIViewController {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: UILabel())
         self.webview = DetailWebView.init(frame: view.bounds)
-//        webview.delegate = self
+        webview.delegate = self
         self.webview.scrollView.delegate = self
         self.view.addSubview(webview)
         self.previousWeb = DetailWebView.init(frame: CGRect.init(x: 0, y: -screenHeight, width: screenWidth, height: screenHeight))
@@ -152,7 +152,7 @@ extension DetailViewController {
     func changeWebview(_ showID: Int) {
         webview.removeFromSuperview()
         previousWeb.scrollView.delegate = self
-//        previousWeb.delegate = self
+        previousWeb.delegate = self
         webview = previousWeb
         id = showID
         setUI()
@@ -166,8 +166,8 @@ extension DetailViewController {
             .request(.getNewsDesc(id))
             .mapModel(NewsDetailModel.self)
             .subscribe(onSuccess: { (model) in
-                if let image = model.image {
-                    self.webview.img.kf.setImage(with: URL.init(string: image))
+                if let imageUrl = model.image{
+                    self.webview.img.kf.setImage(with: URL(string: imageUrl))
                     self.webview.titleLab.text = model.title
                 } else {
                     self.webview.img.isHidden = true
@@ -216,12 +216,12 @@ extension DetailViewController {
     
 }
 
-//extension DetailViewController: UIWebViewDelegate {
-//    func webViewDidStartLoad(_ webView: UIWebView) {
-//        //        waitView.isHidden = false
-//    }
-//    func webViewDidFinishLoad(_ webView: UIWebView) {
-//        webview.waitView.removeFromSuperview()
-//        webview.nextLab.frame = CGRect.init(x: 15, y: self.webview.scrollView.contentSize.height + 10, width: screenWidth - 30, height: 20)
-//    }
-//}
+extension DetailViewController: UIWebViewDelegate {
+    func webViewDidStartLoad(_ webView: UIWebView) {
+//         waitView.isHidden = false
+    }
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        webview.waitView.removeFromSuperview()
+        webview.nextLab.frame = CGRect.init(x: 15, y: self.webview.scrollView.contentSize.height + 10, width: screenWidth - 30, height: 20)
+    }
+}

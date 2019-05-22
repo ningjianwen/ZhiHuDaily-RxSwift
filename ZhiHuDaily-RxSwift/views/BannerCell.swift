@@ -31,7 +31,8 @@ class BannerCell: UICollectionViewCell {
         self.contentView.addSubview(self.imgTitle)
         
         self.img.snp.makeConstraints { (make) in
-            make.height.width.equalToSuperview()
+            make.height.width.equalTo(self.contentView)
+            make.top.left.equalTo(self.contentView)
         }
         self.imgMask.image = UIImage(named: "Home_Image_Mask")
         self.imgMask.snp.makeConstraints { (make) in
